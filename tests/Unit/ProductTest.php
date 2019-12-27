@@ -2,47 +2,78 @@
 
 namespace Tests\Unit;
 
-use App\Category;
 use App\Product;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Artisan;
 
-// https://stackoverflow.com/questions/55000360/phpunit-test-cant-find-factory
-class CrudTest extends TestCase
+
+/**
+ * https://stackoverflow.com/questions/55000360/phpunit-test-cant-find-factory
+ */
+
+class ProductTest extends TestCase
 {
     use RefreshDatabase;
 
     /**
-     * A basic test example.
+     * Create process
      *
      * @runInSeparateProcess
-     *
-     * @return void
+     * @return               void
      */
-
-
-    public function testProduct()
+    public function testProductCreate()
     {
-        parent::setUp();
-
-        $this->product = factory(Product::class)->create();
-        $this->assertDatabaseHas('products', [
-            'name' => $this->product->name,
-            'price' => $this->product->price,
-            'quantity' => $this->product->quantity,
-            'category_id' => $this->product->category_id,
-        ]);
+        $product = factory(Product::class)->create();
+        $this->assertDatabaseHas(
+            'products',
+            [
+                'name' => $product->name,
+                'price' => $product->price,
+                'quantity' => $product->quantity,
+                'category_id' => $product->category_id,
+            ]
+        );
     }
 
-    public function testCategory()
+    /**
+     * Read Test
+     *
+     * @runInSeparateProcess
+     * @return               void
+     */
+    public function testProductRead()
     {
-        parent::setUp();
+        $product = factory(Product::class, 10)->create();
+        $this->assertTrue($product->count() == 10);
+    }
 
-        $this->category = factory(Category::class)->create();
-        $this->assertDatabaseHas('categories', [
-            'name' => $this->category->name,
-        ]);
+    /**
+     * Update Test
+     *
+     * @runInSeparateProcess
+     * @return               void
+     */
+    public function testProductUpdate()
+    {
+        $product = factory(Product::class)->create();
+        $product->update(
+            [
+            'name' => 'Nome do produto',
+            'price' => 1492.99,
+            'quantity' => 116,
+            'category_id' => 9,
+            ]
+        );
+
+        $this->assertDatabaseHas(
+            'products',
+            [
+                'name' => $product->name,
+                'price' => $product->price,
+                'quantity' => $product->quantity,
+                'category_id' => $product->category_id,
+            ]
+        );
     }
 }
 

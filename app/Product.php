@@ -7,7 +7,7 @@ use App\Category;
 
 class Product extends Model
 {
-    protected $fillable = [ 
+    protected $fillable = [
         'name',
         'price',
         'quantity',

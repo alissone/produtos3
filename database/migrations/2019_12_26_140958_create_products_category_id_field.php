@@ -13,9 +13,12 @@ class CreateProductsCategoryIdField extends Migration
      */
     public function up()
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->unsignedInteger('category_id')->nullable();
-        });
+        Schema::table(
+            'products',
+            function (Blueprint $table) {
+                $table->unsignedInteger('category_id')->nullable();
+            }
+        );
     }
 
     /**
@@ -25,8 +28,11 @@ class CreateProductsCategoryIdField extends Migration
      */
     public function down()
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->dropColumn('category_id');
-        });
+        Schema::table(
+            'products',
+            function (Blueprint $table) {
+                $table->dropColumn('category_id');
+            }
+        );
     }
 }
