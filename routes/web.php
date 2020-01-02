@@ -23,9 +23,12 @@ Route::get(
 }
 );
 
-//Route::get('products/{id}/edit', function ($id) {
-//    return view('/products/edit');
-//}
-//)->where('id', '[0-9]+');
-
 Route::resource('products', 'ProductController');
+
+Route::get(
+    '/categories/insert', function () {
+    return view('/categories/insert');
+}
+);
+
+Route::resource('categories', 'CategoryController');

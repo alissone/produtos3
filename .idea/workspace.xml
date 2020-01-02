@@ -2,47 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="983aae66-d35c-42c5-8d41-c3bf6423192b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/CategoryTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/produtos3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/produtos3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Category.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Product.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/CategoryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CategoryFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProductFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_26_134222_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_26_134222_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_26_134223_create_category_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_26_134223_create_category_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_26_140958_create_products_category_id_field.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_26_140958_create_products_category_id_field.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_26_143948_add_constraint_category_id_from_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_26_143948_add_constraint_category_id_from_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/ProductSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ProductSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ProductTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProductTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,8 +142,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -219,7 +185,14 @@
       <workItem from="1577386240995" duration="9041000" />
       <workItem from="1577445975240" duration="7015000" />
       <workItem from="1577455760336" duration="283000" />
-      <workItem from="1577457027436" duration="16170000" />
+      <workItem from="1577457027436" duration="17591000" />
+      <workItem from="1577567393753" duration="85000" />
+      <workItem from="1577706538642" duration="264000" />
+      <workItem from="1577708752767" duration="3021000" />
+      <workItem from="1577717536078" duration="6930000" />
+      <workItem from="1577735807934" duration="50000" />
+      <workItem from="1577735881172" duration="4296000" />
+      <workItem from="1577966029906" duration="9859000" />
     </task>
     <servers />
   </component>
@@ -251,14 +224,14 @@
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state x="481" y="271" width="629" height="351" key="NewPhpClassDialog/0.0.1600.899@0.0.1600.899" timestamp="1577473186657" />
-    <state x="311" y="84" key="SettingsEditor" timestamp="1577452121762">
+    <state x="311" y="84" width="962" height="732" key="SettingsEditor" timestamp="1577787379167">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
-    <state x="311" y="84" key="SettingsEditor/0.0.1600.899@0.0.1600.899" timestamp="1577452121762" />
-    <state x="493" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1577457029851">
+    <state x="311" y="84" width="962" height="732" key="SettingsEditor/0.0.1600.899@0.0.1600.899" timestamp="1577787379167" />
+    <state x="493" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1577966031560">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
-    <state x="493" y="277" key="com.intellij.ide.util.TipDialog/0.0.1600.899@0.0.1600.899" timestamp="1577457029851" />
+    <state x="493" y="277" key="com.intellij.ide.util.TipDialog/0.0.1600.899@0.0.1600.899" timestamp="1577966031560" />
     <state x="0" y="0" width="1592" height="892" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1577451865364">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
@@ -267,13 +240,17 @@
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.0.1600.899@0.0.1600.899" timestamp="1577458063612" />
+    <state x="448" y="172" width="700" height="530" key="recent.locations.popup" timestamp="1577709246051">
+      <screen x="0" y="0" width="1600" height="899" />
+    </state>
+    <state x="448" y="172" width="700" height="530" key="recent.locations.popup/0.0.1600.899@0.0.1600.899" timestamp="1577709246051" />
     <state x="463" y="203" key="run.anything.popup" timestamp="1577393599867">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state x="463" y="203" key="run.anything.popup/0.0.1600.899@0.0.1600.899" timestamp="1577393599867" />
-    <state x="463" y="193" width="672" height="678" key="search.everywhere.popup" timestamp="1577390707170">
+    <state x="463" y="193" width="672" height="678" key="search.everywhere.popup" timestamp="1577997667165">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
-    <state x="463" y="193" width="672" height="678" key="search.everywhere.popup/0.0.1600.899@0.0.1600.899" timestamp="1577390707170" />
+    <state x="463" y="193" width="672" height="678" key="search.everywhere.popup/0.0.1600.899@0.0.1600.899" timestamp="1577997667165" />
   </component>
 </project>

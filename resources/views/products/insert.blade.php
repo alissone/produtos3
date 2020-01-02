@@ -10,8 +10,6 @@
 </head>
 
 <body>
-
-
     <section class="section">
         <div class="container">
 
@@ -84,21 +82,25 @@
 
                                 <div class="dropdown is-hoverable">
                                     <div class="dropdown-trigger">
-                                        <button class="button is-fullwidth is-outlined" aria-haspopup="true" aria-controls="dropdown-menu4">
-                                            <span>Sem Categoria</span>
-                                            <span class = "icon is-small">
+                                        <!-- <button class="button is-fullwidth is-outlined" aria-haspopup="true" aria-controls="dropdown-menu4"> -->
+                                        <select id=cCategoria name="category_id">
+
+
+                                            <!-- <span>Sem Categoria</span> -->
+                                            <!-- <span class = "icon is-small">
                                                 <i class = "fas fa-angle-down" aria-hidden = "true"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                                        <div class="dropdown-content">
+                                            </span> -->
+                                        <!-- </button> -->
+                                    <!-- </div> -->
+                                    <!-- <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                                        <div class="dropdown-content"> -->
                                             @foreach($categories as $key => $data)
-                                                <a href="#" class="dropdown-item">{{$data->name}}</a>
+                                                <option value="{{$data->id}}"><a href="#" class="dropdown-item">{{$data->name}}</a></option>
                                             @endforeach
-                                            <hr class="dropdown-divider">
-                                            <a href="#" class="dropdown-item">Nova Categoria</a>
-                                        </div>
+                                            <!-- <hr class="dropdown-divider"> -->
+                                            <!-- <a href="#" class="dropdown-item">Nova Categoria</a> -->
+                                            </select>
+                                        <!-- </div> -->
                                     </div>
                                 </div>
 
@@ -123,7 +125,7 @@
 
                         </div>
                         <footer class="card-footer">
-                            <a href="{{ url('/') }}" class="card-footer-item">Cancelar</a>
+                            <a href="{{ url('/products') }}" class="card-footer-item">Cancelar</a>
 
                             <a type="send" href="javascript:{}" onclick="document.getElementById('create_product_form').submit(); return false;" class="card-footer-item is-dark">Salvar</a>
                         </footer>

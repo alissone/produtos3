@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>products.index</title>
+    <title>Lista de Categorias</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -18,7 +18,7 @@
 <body>
     <div class="flex-center position-ref full-height">
         @if (Route::has('login'))
-        <div class="top-right prod_listing">
+        <div class="top-right cat_listing">
             @auth
             <a href="{{ url('/home') }}">Home</a> @else
             <a href="{{ route('login') }}">Login</a> @if (Route::has('register'))
@@ -35,7 +35,7 @@
                         <br/>
                         <br/>
                         <br/>
-                        Lista de Produtos Cadastrados Atualmente
+                        Lista de Categorias cadastradas
                     </div>
 
                     <form action="/foo/bar" method="POST">
@@ -43,29 +43,23 @@
                         @csrf
                     </form>
 
-                    <div class="prod_listing">
+                    <div class="cat_listing">
                         <table style="width:100%">
                             <tr>
                                 <th><b>Nome</b></th>
-                                <td><b>ID</b></td>
-                                <td><b>Preço</b></td>
-                                <td><b>Quantidade</b></td>
-                                <td><b>Ações</b></td>
+                                <th><b>Ações</b></th>
                                 <br>
                             </tr>
-                            @foreach($products as $key => $data)
+                            @foreach($categories as $key => $data)
                             <tr>
                                 <td>{{$data->name}}</td>
-                                <td>{{$data->id}}</td>
-                                <td>{{$data->price}}</td>
-                                <td>{{$data->quantity}}</td>
-                                <!-- <td> <a href="products/{product}/edit"> <i class="fa3 fa-pencil has-text-grey"></i> </a> <i class="fa3 fa-trash has-text-danger modal-button" onClick="askDeleteItem({{$data->id}})" data-target="#deleteModal" aria-haspopup="true"></i> </td> -->
+                                <!-- <td> <a href="categories/{product}/edit"> <i class="fa3 fa-pencil has-text-grey"></i> </a> <i class="fa3 fa-trash has-text-danger modal-button" onClick="askDeleteItem({{$data->id}})" data-target="#deleteModal" aria-haspopup="true"></i> </td> -->
                                 <td>
-                                    <form action="{{route('products.destroy', $data->id)}}" method="POST">
+                                    <form action="{{route('categories.destroy', $data->id)}}" method="POST">
                                         @method('DELETE')
                                         @csrf
                                         <button class="fa3 fa-trash has-text-danger is-small" data-target="#deleteModal" aria-haspopup="true"></button>
-                                        <a href="{{route('products.edit',['product' => $data->id])}}" class="fa3 fa-pencil modal-button"</a>
+                                        <a href="{{route('categories.edit',['category' => $data->id])}}" class="fa3 fa-pencil modal-button"</a>
                                     </form>
                                 </td>
                                 <br>
@@ -73,9 +67,9 @@
                             @endforeach
                     </div>
                     </table>
-                    <a href="{{ route('products.create') }}" class="button is-success">
+                    <a href="{{ route('categories.create') }}" class="button is-success">
                         <span class="icon is-medium"> </span>
-                        <span>Criar novo produto</span>
+                        <span>Criar nova categoria</span>
                     </a>
                 </div>
 

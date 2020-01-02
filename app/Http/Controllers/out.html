@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" http-equiv="refresh" content="500">
+<title>/home/alisson/Documents/Projetos/Testes/AtividadeLaravel/produtos3/app/Http/Controllers/ProductController.php</title>
+<link rel="stylesheet" type="text/css" href="highlight.css">
+</head>
+<body class="hl">
+<pre class="hl"><span class="hl opt">&lt;</span>?php
+
+<span class="hl kwa">namespace</span> App\Http\Controllers<span class="hl opt">;</span>
+
+<span class="hl kwa">use</span> App\Product<span class="hl opt">;</span>
+<span class="hl kwa">use</span> Illuminate\Http\Request<span class="hl opt">;</span>
+
+<span class="hl kwa">class</span> ProductController <span class="hl kwa">extends</span> Controller
+<span class="hl opt">{</span>
+    <span class="hl com">/**</span>
+<span class="hl com">     * Display a listing of the resource.</span>
+<span class="hl com">     *</span>
+<span class="hl com">     * &#64;return \Illuminate\Http\Response</span>
+<span class="hl com">     */</span>
+    <span class="hl kwa">public function</span> <span class="hl kwd">index</span><span class="hl opt">()</span>
+    <span class="hl opt">{</span>
+        <span class="hl kwc">$products</span> <span class="hl opt">=</span> Product<span class="hl opt">::</span><span class="hl kwd">orderBy</span><span class="hl opt">(</span><span class="hl str">&apos;created_at&apos;</span><span class="hl opt">,</span> <span class="hl str">&apos;name&apos;</span><span class="hl opt">)-&gt;</span><span class="hl kwd">paginate</span><span class="hl opt">(</span><span class="hl num">10</span><span class="hl opt">);</span>
+        <span class="hl kwa">return</span> <span class="hl kwd">view</span><span class="hl opt">(</span><span class="hl str">&apos;products.index&apos;</span><span class="hl opt">, [</span><span class="hl str">&apos;products&apos;</span> <span class="hl opt">=&gt;</span> <span class="hl kwc">$products</span><span class="hl opt">]);</span>
+    <span class="hl opt">}</span>
+
+    <span class="hl com">/**</span>
+<span class="hl com">     * Show the form for creating a new resource.</span>
+<span class="hl com">     *</span>
+<span class="hl com">     * &#64;return \Illuminate\Http\Response</span>
+<span class="hl com">     */</span>
+    <span class="hl kwa">public function</span> <span class="hl kwd">create</span><span class="hl opt">()</span>
+    <span class="hl opt">{</span>
+        <span class="hl slc">//</span>
+    <span class="hl opt">}</span>
+
+    <span class="hl com">/**</span>
+<span class="hl com">     * Store a newly created resource in storage.</span>
+<span class="hl com">     *</span>
+<span class="hl com">     * &#64;param  \Illuminate\Http\Request $request</span>
+<span class="hl com">     * &#64;return \Illuminate\Http\Response</span>
+<span class="hl com">     */</span>
+    <span class="hl kwa">public function</span> <span class="hl kwd">store</span><span class="hl opt">(</span>Request <span class="hl kwc">$request</span><span class="hl opt">)</span>
+    <span class="hl opt">{</span>
+        <span class="hl slc">//</span>
+    <span class="hl opt">}</span>
+
+    <span class="hl com">/**</span>
+<span class="hl com">     * Display the specified resource.</span>
+<span class="hl com">     *</span>
+<span class="hl com">     * &#64;param  \App\Product $product</span>
+<span class="hl com">     * &#64;return \Illuminate\Http\Response</span>
+<span class="hl com">     */</span>
+    <span class="hl kwa">public function</span> <span class="hl kwd">show</span><span class="hl opt">(</span>Product <span class="hl kwc">$product</span><span class="hl opt">)</span>
+    <span class="hl opt">{</span>
+        <span class="hl slc">//</span>
+    <span class="hl opt">}</span>
+
+    <span class="hl com">/**</span>
+<span class="hl com">     * Show the form for editing the specified resource.</span>
+<span class="hl com">     *</span>
+<span class="hl com">     * &#64;param  \App\Product $product</span>
+<span class="hl com">     * &#64;return \Illuminate\Http\Response</span>
+<span class="hl com">     */</span>
+    <span class="hl kwa">public function</span> <span class="hl kwd">edit</span><span class="hl opt">(</span>Product <span class="hl kwc">$product</span><span class="hl opt">)</span>
+    <span class="hl opt">{</span>
+        <span class="hl slc">//</span>
+    <span class="hl opt">}</span>
+
+    <span class="hl com">/**</span>
+<span class="hl com">     * Update the specified resource in storage.</span>
+<span class="hl com">     *</span>
+<span class="hl com">     * &#64;param  \Illuminate\Http\Request $request</span>
+<span class="hl com">     * &#64;param  \App\Product             $product</span>
+<span class="hl com">     * &#64;return \Illuminate\Http\Response</span>
+<span class="hl com">     */</span>
+    <span class="hl kwa">public function</span> <span class="hl kwd">update</span><span class="hl opt">(</span>Request <span class="hl kwc">$request</span><span class="hl opt">,</span> Product <span class="hl kwc">$product</span><span class="hl opt">)</span>
+    <span class="hl opt">{</span>
+        <span class="hl slc">//</span>
+    <span class="hl opt">}</span>
+
+    <span class="hl com">/**</span>
+<span class="hl com">     * Remove the specified resource from storage.</span>
+<span class="hl com">     *</span>
+<span class="hl com">     * &#64;param  \App\Product $product</span>
+<span class="hl com">     * &#64;return \Illuminate\Http\Response</span>
+<span class="hl com">     */</span>
+    <span class="hl kwa">public function</span> <span class="hl kwd">destroy</span><span class="hl opt">(</span>Product <span class="hl kwc">$product</span><span class="hl opt">)</span>
+    <span class="hl opt">{</span>
+        <span class="hl slc">//</span>
+    <span class="hl opt">}</span>
+<span class="hl opt">}</span>
+</pre>
+</body>
+</html>
+<!--HTML generated by highlight 3.41, http://www.andre-simon.de/-->
