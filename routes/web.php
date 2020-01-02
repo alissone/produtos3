@@ -16,3 +16,11 @@ Route::get(
         return view('welcome');
     }
 );
+
+Route::get(
+    '/insert', function () {
+    return view('/products/insert');
+}
+);
+
+Route::resource('products', 'ProductController');
