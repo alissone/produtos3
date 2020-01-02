@@ -64,10 +64,11 @@ class ProductController extends Controller
      * @param  \App\Product $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $id)
+    public function edit(Product $product)
     {
-        $product = Product::findOrFail($id);
-        return (view('products.edit',compact('product')));
+        // $product = Product::findOrFail($id);
+        $categories = Category::orderBy('created_at', 'desc')->paginate(10);
+        return view('products.edit',['categories' => $categories, 'product' => $product]);
     }
 
     /**
@@ -88,9 +89,8 @@ class ProductController extends Controller
      * @param  \App\Product $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $id)
+    public function destroy(Product $product)
     {
-        $product = Product::findOrFail($id);
         $product->delete();
         return redirect()->route('products.index')->with('alert-success','Produto excluído!');
     }

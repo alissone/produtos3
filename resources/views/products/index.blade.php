@@ -61,19 +61,19 @@
                                 <td>{{$data->quantity}}</td>
                                 <!-- <td> <a href="products/{product}/edit"> <i class="fa3 fa-pencil has-text-grey"></i> </a> <i class="fa3 fa-trash has-text-danger modal-button" onClick="askDeleteItem({{$data->id}})" data-target="#deleteModal" aria-haspopup="true"></i> </td> -->
                                 <td>
-                                <!-- <form action="/products" method="DELETE"> -->
-                                <form action="{{route('products.destroy', $data->id)}}?{{time()}}" method="POST">
-                                    @method('DELETE')
-                                    @csrf
-                                    <button class="fa3 fa-trash has-text-danger is-small" data-target="#deleteModal" aria-haspopup="true"></button>
-                                </form>
-
-                                     <!-- <i class="fa3 fa-trash has-text-danger modal-button" onClick="askDeleteItem({{$data->id}})"</i> </td> -->
+                                    <form action="{{route('products.destroy', $data->id)}}?{{time()}}" method="POST">
+                                        @method('DELETE')
+                                        @csrf
+                                        <button class="fa3 fa-trash has-text-danger is-small" data-target="#deleteModal" aria-haspopup="true"></button>
+                                        <a href="{{url('/products/edit', $data->id)}}?{{time()}}" class="fa3 fa-pencil modal-button"</a>
+                                    </form>
+                                </td>
                                 <br>
                             </tr>
                             @endforeach
                     </div>
                     </table>
+                    <!-- <a href="{{url('/products/edit', $data->id)}}?{{time()}}" class="is-success"><i class="fa3 fa-pencil modal-button" onClick="askDeleteItem({{$data->id}})"</i></a> -->
                     <a href="{{ url('/products/create') }}" class="button is-success">
                         <span class="icon is-medium"> </span>
                         <span>Criar novo produto</span>
