@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('created_at', 'name')->paginate(10);
+        $products = Product::orderBy('created_at', 'desc')->paginate(10);
         return view('products.index', ['products' => $products]);
     }
 
@@ -25,7 +26,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::orderBy('created_at', 'desc')->paginate(10);
+        return view('products.insert', ['categories' => $categories]);
     }
 
     /**
@@ -36,7 +38,13 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = new Product;
+        $product->name        = $request->name;
+        $product->price       = $request->price;
+        $product->quantity    = $request->quantity;
+        $product->save();
+        return (redirect()->route('products.index')->with('message', 'Produto criado!'));
+
     }
 
     /**
@@ -56,9 +64,10 @@ class ProductController extends Controller
      * @param  \App\Product $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Product $id)
     {
-        //
+        $product = Product::findOrFail($id);
+        return (view('products.edit',compact('product')));
     }
 
     /**
@@ -79,8 +88,11 @@ class ProductController extends Controller
      * @param  \App\Product $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Product $id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $product->delete();
+        return redirect()->route('products.index')->with('alert-success','Produto excluído!');
     }
+
 }
