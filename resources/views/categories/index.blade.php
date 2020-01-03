@@ -83,7 +83,7 @@
             font-weight: normal;
             font-style: normal;
         }
-        
+
         .fa3 {
             display: inline-block;
             font: normal normal normal 18px/1 fontawesome3;
@@ -94,41 +94,16 @@
             padding-right: 6px;
             cursor: pointer
         }
+        button {
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            outline:none;
+        }
     </style>
 
-
-    <script>
-        function askDeleteItem(id) {
-            // var target = document.querySelector(el.getAttribute('data-target'));
-            // target.classList.add('is-active');
-
-            if (confirm('Tem certeza que deseja deletar o item ' + id + '?')) {
-                confirmDeleteItem(id);
-            } else {
-
-            }
-        }
-
-        function confirmDeleteItem(id) {
-            alert(id);
-        }
-
-        //     $('#edit-modal').on('show.bs.modal', function(e) {
-
-        // var $modal = $(this),
-        //     esseyId = e.relatedTarget.id;
-
-        // $.ajax({
-        //     cache: false,
-        //     type: 'POST',
-        //     url: 'backend.php',
-        //     data: 'EID=' + essayId,
-        //     success: function(data) {
-        //         $modal.find('.edit-content').html(data);
-        //     }
-        // });
-        // })
-    </script>
 </body>
 
 </html>
