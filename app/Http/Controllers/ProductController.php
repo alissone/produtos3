@@ -12,66 +12,44 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
-        $products = Product::orderBy('created_at', 'desc')->paginate(10);
-        return view('products.index', ['products' => $products]);
+        return view('products.index', ['products' => Product::all()]);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function create()
     {
-        $categories = Category::orderBy('created_at', 'desc')->paginate(10);
-        return view('products.insert', ['categories' => $categories]);
+        return view('products.insert', ['categories' => Category::all()]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param Request $request
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
-//        dd($request);
-        $product = new Product;
-        $product->name = $request->name;
-        $product->price = $request->price;
-        $product->quantity = $request->quantity;
-        $product->category_id = $request->category_id;
-        $product->save();
+        Product::create($request->all());
         return (redirect()->route('products.index')->with('message', 'Produto criado!'));
-
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param Product $product
-     * @return Response
-     */
-    public function show(Product $product)
-    {
-        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param Product $product
-     * @return Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function edit(Product $product)
     {
-        // $product = Product::findOrFail($id);
-        $categories = Category::orderBy('created_at', 'desc')->paginate(10);
-        return view('products.edit', ['categories' => $categories, 'product' => $product]);
+        return view('products.edit', ['categories' => Category::all(), 'product' => $product]);
     }
 
     /**
@@ -79,14 +57,11 @@ class ProductController extends Controller
      *
      * @param Request $request
      * @param Product $product
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request, Product $product)
     {
-        $product->name = $request->name;
-        $product->price = $request->price;
-        $product->quantity = $request->quantity;
-        $product->save();
+        $product->update($request->all());
         return (redirect()->route('products.index')->with('message', 'Produto editado!'));
     }
 
@@ -94,7 +69,8 @@ class ProductController extends Controller
      * Remove the specified resource from storage.
      *
      * @param Product $product
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
      */
     public function destroy(Product $product)
     {
