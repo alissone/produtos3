@@ -34,13 +34,11 @@
                     <div class="title is-vcentered">
                         <br/>
                         <br/>
-                        <br/>
-                        Lista de Categorias cadastradas
+                        <br/> Lista de Categorias cadastradas
                     </div>
 
                     <form action="/foo/bar" method="POST">
-                        @method('DELETE')
-                        @csrf
+                        @method('DELETE') @csrf
                     </form>
 
                     <div class="cat_listing">
@@ -56,10 +54,9 @@
                                 <!-- <td> <a href="categories/{product}/edit"> <i class="fa3 fa-pencil has-text-grey"></i> </a> <i class="fa3 fa-trash has-text-danger modal-button" onClick="askDeleteItem({{$data->id}})" data-target="#deleteModal" aria-haspopup="true"></i> </td> -->
                                 <td>
                                     <form action="{{route('categories.destroy', $data->id)}}" method="POST">
-                                        @method('DELETE')
-                                        @csrf
+                                        @method('DELETE') @csrf
                                         <button class="fa3 fa-trash has-text-danger is-small" data-target="#deleteModal" aria-haspopup="true"></button>
-                                        <a href="{{route('categories.edit',['category' => $data->id])}}" class="fa3 fa-pencil modal-button"</a>
+                                        <a href="{{route('categories.edit',['category' => $data->id])}}" class="fa3 fa-pencil modal-button" </a>
                                     </form>
                                 </td>
                                 <br>
@@ -86,6 +83,7 @@
             font-weight: normal;
             font-style: normal;
         }
+        
         .fa3 {
             display: inline-block;
             font: normal normal normal 18px/1 fontawesome3;
@@ -99,39 +97,38 @@
     </style>
 
 
-<script>
-    function askDeleteItem(id){
-        // var target = document.querySelector(el.getAttribute('data-target'));
-        // target.classList.add('is-active');
+    <script>
+        function askDeleteItem(id) {
+            // var target = document.querySelector(el.getAttribute('data-target'));
+            // target.classList.add('is-active');
 
-        if (confirm('Tem certeza que deseja deletar o item '+id+'?')) {
-            confirmDeleteItem(id);
-        } else {
+            if (confirm('Tem certeza que deseja deletar o item ' + id + '?')) {
+                confirmDeleteItem(id);
+            } else {
 
+            }
         }
-    }
 
-    function confirmDeleteItem(id){
-        alert(id);
-    }
+        function confirmDeleteItem(id) {
+            alert(id);
+        }
 
-//     $('#edit-modal').on('show.bs.modal', function(e) {
+        //     $('#edit-modal').on('show.bs.modal', function(e) {
 
-// var $modal = $(this),
-//     esseyId = e.relatedTarget.id;
+        // var $modal = $(this),
+        //     esseyId = e.relatedTarget.id;
 
-// $.ajax({
-//     cache: false,
-//     type: 'POST',
-//     url: 'backend.php',
-//     data: 'EID=' + essayId,
-//     success: function(data) {
-//         $modal.find('.edit-content').html(data);
-//     }
-// });
-// })
-
-</script>
+        // $.ajax({
+        //     cache: false,
+        //     type: 'POST',
+        //     url: 'backend.php',
+        //     data: 'EID=' + essayId,
+        //     success: function(data) {
+        //         $modal.find('.edit-content').html(data);
+        //     }
+        // });
+        // })
+    </script>
 </body>
 
 </html>

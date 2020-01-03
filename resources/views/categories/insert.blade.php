@@ -22,68 +22,57 @@
             </nav>
             <br/>
 
-            <h1 class="title">
-                Criar uma Nova Categoria
-            </h1>
-            <p class="subtitle">
-                Cadastro de categorias
-            </p>
-
+            <h1 class="title"> Criar uma Nova Categoria </h1>
+            <p class="subtitle"> Cadastro de categorias </p>
             <br/>
 
             <div class="columns">
                 <div class="column is-half">
-                <form id="create_category_form" action="/categories" method="POST">
-                    @method('POST')
-                    @csrf
-                    <div class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Informações do Produto
-                            </p>
-
-                            </a>
-                        </header>
-                        <div class="card-content">
-                            <div class="content">
-
-
-
-                                <!-- Forms -->
-                                <div class="field">
-                                    <label class="label">Nome</label>
-                                    <div class="control">
-                                        <input class="input is-focused" name="name"  type="text" placeholder="Produtos de beleza">
+                    <form id="create_category_form" action="/categories" method="POST">
+                        @method('POST') @csrf
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Informações do Produto
+                                </p>
+                                </a>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <!-- Forms -->
+                                    <div class="field">
+                                        <label class="label">Nome</label>
+                                        <div class="control">
+                                            <input class="input is-focused" name="name" type="text" placeholder="Produtos de beleza">
+                                        </div>
+                                        <!-- <p class="help">Nome do Produto</p> -->
                                     </div>
-                                    <!-- <p class="help">Nome do Produto</p> -->
+
+                                    <script>
+                                        document.addEventListener('DOMContentLoaded', function() {
+                                            var dropdown = document.querySelector('.dropdown');
+                                            dropdown.addEventListener('click', function(event) {
+                                                event.stopPropagation();
+                                                dropdown.classList.toggle('is-active');
+                                            });
+                                        });
+
+                                        // var dropdown = document.querySelector('.dropdown');
+                                        // for (var i = 0; i < dropdown.options.length; i++) {
+                                        //     console.log(dropdown.options[i].text);
+                                        //     }
+                                    </script>
+
+
                                 </div>
 
-                                <script>
-                                    document.addEventListener('DOMContentLoaded', function() {
-                                        var dropdown = document.querySelector('.dropdown');
-                                        dropdown.addEventListener('click', function(event) {
-                                            event.stopPropagation();
-                                            dropdown.classList.toggle('is-active');
-                                        });
-                                    });
-
-                                    // var dropdown = document.querySelector('.dropdown');
-                                    // for (var i = 0; i < dropdown.options.length; i++) {
-                                    //     console.log(dropdown.options[i].text);
-                                    //     }
-
-                                </script>
-
-
                             </div>
+                            <footer class="card-footer">
+                                <a href="{{ url('/categories') }}" class="card-footer-item">Cancelar</a>
 
-                        </div>
-                        <footer class="card-footer">
-                            <a href="{{ url('/categories') }}" class="card-footer-item">Cancelar</a>
-
-                            <a type="send" href="javascript:{}" onclick="document.getElementById('create_category_form').submit(); return false;" class="card-footer-item is-dark">Salvar</a>
-                        </footer>
-                        </form>
+                                <a type="send" href="javascript:{}" onclick="document.getElementById('create_category_form').submit(); return false;" class="card-footer-item is-dark">Salvar</a>
+                            </footer>
+                    </form>
                     </div>
                 </div>
             </div>

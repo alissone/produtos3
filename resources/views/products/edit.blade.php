@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Editar Produto</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 
 <body>
-
 
     <section class="section">
         <div class="container">
@@ -24,124 +22,76 @@
             </nav>
             <br/>
 
-            <h1 class="title">
-                Editar produto
-            </h1>
-            <p class="subtitle">
-                Modificar produto #{{$product->id}}
-            </p>
-
+            <h1 class="title"> Editar produto </h1>
+            <p class="subtitle"> Modificar produto #{{$product->id}} </p>
             <br/>
 
             <div class="columns">
                 <div class="column is-half">
-                <form id="create_product_form" action="{{route('products.update',['product' => $product->id])}}" method="POST">
-                    @method('PUT')
-                    @csrf
-                    <div class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Informações do Produto
-                            </p>
+                    <form id="create_product_form" action="{{route('products.update',['product' => $product->id])}}" method="POST">
+                        @method('PUT') @csrf
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title"> Informações do Produto </p>
 
-                            </a>
-                        </header>
-                        <div class="card-content">
-                            <div class="content">
-                                <!-- Forms -->
-                                <div class="field">
-                                    <label class="label">Nome</label>
-                                    <div class="control">
-                                        <input class="input is-focused" name="name"  type="text" value="{{$product->name}}">
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <!-- Forms -->
+                                    <div class="field">
+                                        <label class="label">Nome</label>
+                                        <div class="control">
+                                            <input class="input is-focused" name="name" type="text" value="{{$product->name}}">
+                                        </div>
+                                        <!-- <p class="help">Nome do Produto</p> -->
                                     </div>
-                                    <!-- <p class="help">Nome do Produto</p> -->
-                                </div>
 
-                                <div class="columns">
-                                    <div class="column is-half">
-                                        <div class="field">
-                                            <label class="label">Preço</label>
-                                            <div class="control">
-                                                <input class="input" type="text" name="price" value="{{$product->price}}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                    <div class="columns">
+                                        <div class="column is-half">
+                                            <div class="field">
+                                                <label class="label">Preço</label>
+                                                <div class="control">
+                                                    <input class="input" type="text" name="price" value="{{$product->price}}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                                </div>
+                                                <span class="help">(R$)</span>
                                             </div>
-                                            <span class="help">(R$)</span>
+                                        </div>
+
+                                        <div class="column is-half">
+                                            <div class="field">
+                                                <label class="label">Quantidade</label>
+                                                <div class="control">
+                                                    <input class="input" type="text" name="quantity" value="{{$product->quantity}}" oninput="this.value = this.value.replace(/[^\d]/, '')" />
+                                                </div>
+                                                <label class="help">(unidade)</label>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div class="column is-half">
-                                        <div class="field">
-                                            <label class="label">Quantidade</label>
-                                            <div class="control">
-                                                <input class="input" type="text" name="quantity" value="{{$product->quantity}}" oninput="this.value = this.value.replace(/[^\d]/, '')" />
-                                            </div>
-                                            <label class="help">(unidade)</label>
-                                        </div>
-
-                                    </div>
+                                    <select id=cCategoria name="category_id">
+                                        @foreach($categories as $key => $data)
+                                            @if ($data->id != old('cCategoria', $product->category->id))
+                                                <option selected="selected" value="{{$data->id}}">
+                                                    <a href="#" class="dropdown-item">{{$data->name}}</a>
+                                                </option>
+                                            @else
+                                                <option value="{{$data->id}}">
+                                                    <a href="#" class="dropdown-item">{{$data->name}}</a>
+                                                </option>
+                                            @endif
+                                        @endforeach
+                                    </select>
                                 </div>
-
-                                <div class="dropdown is-hoverable">
-                                    <div class="dropdown-trigger">
-                                        <select id=cCategoria name="category_id" selected="{{$product->category->name}}">
-                                            @foreach($categories as $key => $data)
-                                                <option value="{{$data->id}}"><a href="#" class="dropdown-item">{{$data->name}}</a></option>
-                                            @endforeach
-                                            </select>
-                                    </div>
-                                </div>
-
-                                <script>
-                                    document.addEventListener('DOMContentLoaded', function() {
-                                        var dropdown = document.querySelector('.dropdown');
-                                        dropdown.addEventListener('click', function(event) {
-                                            event.stopPropagation();
-                                            dropdown.classList.toggle('is-active');
-                                        });
-                                    });
-
-                                    // var dropdown = document.querySelector('.dropdown');
-                                    // for (var i = 0; i < dropdown.options.length; i++) {
-                                    //     console.log(dropdown.options[i].text);
-                                    //     }
-
-                                </script>
-
 
                             </div>
-
-                        </div>
-                        <footer class="card-footer">
-                            <a href="{{ url('/products') }}" class="card-footer-item">Cancelar</a>
-
-                            <a type="send" href="javascript:{}" onclick="document.getElementById('create_product_form').submit(); return false;" class="card-footer-item is-dark">Salvar</a>
-                        </footer>
-                        </form>
+                            <footer class="card-footer">
+                                <a href="{{ url('/products') }}" class="card-footer-item">Cancelar</a>
+                                <a type="send" href="javascript:{}" onclick="document.getElementById('create_product_form').submit(); return false;" class="card-footer-item is-dark">Salvar</a>
+                            </footer>
+                    </form>
                     </div>
                 </div>
             </div>
     </section>
 </body>
-
-<script>
-    function validateNumber(evt) {
-        var theEvent = evt || window.event;
-
-        // Handle paste
-        if (theEvent.type === 'paste') {
-            key = event.clipboardData.getData('text/plain');
-        } else {
-            // Handle key press
-            var key = theEvent.keyCode || theEvent.which;
-            key = String.fromCharCode(key);
-        }
-        var regex = /[0-9]|\./;
-        if (!regex.test(key)) {
-            theEvent.returnValue = false;
-            if (theEvent.preventDefault) theEvent.preventDefault();
-        }
-    }
-</script>
-
-
-
 </html>

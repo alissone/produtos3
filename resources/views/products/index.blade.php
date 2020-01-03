@@ -4,44 +4,30 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>products.index</title>
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-
 </head>
 
 <body>
     <div class="flex-center position-ref full-height">
         @if (Route::has('login'))
-        <div class="top-right prod_listing">
-            @auth
-            <a href="{{ url('/home') }}">Home</a> @else
-            <a href="{{ route('login') }}">Login</a> @if (Route::has('register'))
-            <a href="{{ route('register') }}">Register</a> @endif @endauth
-        </div>
+            <div class="top-right prod_listing">
+                @auth
+                <a href="{{ url('/home') }}">Home</a> @else
+                <a href="{{ route('login') }}">Login</a> @if (Route::has('register'))
+                <a href="{{ route('register') }}">Register</a> @endif @endauth
+            </div>
         @endif
 
         <div class="columns is-mobile is-centered">
             <div class="column is-half">
-
-
                 <div class="content">
                     <div class="title is-vcentered">
-                        <br/>
-                        <br/>
-                        <br/>
-                        Lista de Produtos Cadastrados Atualmente
-                    </div>
-
-                    <form action="/foo/bar" method="POST">
-                        @method('DELETE')
-                        @csrf
-                    </form>
+                        <br/> <br/>
+                        <br/> Lista de Produtos Cadastrados Atualmente </div>
 
                     <div class="prod_listing">
                         <table style="width:100%">
@@ -54,22 +40,21 @@
                                 <br>
                             </tr>
                             @foreach($products as $key => $data)
-                            <tr>
-                                <td>{{$data->name}}</td>
-                                <td>{{$data->id}}</td>
-                                <td>{{$data->price}}</td>
-                                <td>{{$data->quantity}}</td>
-                                <!-- <td> <a href="products/{product}/edit"> <i class="fa3 fa-pencil has-text-grey"></i> </a> <i class="fa3 fa-trash has-text-danger modal-button" onClick="askDeleteItem({{$data->id}})" data-target="#deleteModal" aria-haspopup="true"></i> </td> -->
-                                <td>
-                                    <form action="{{route('products.destroy', $data->id)}}" method="POST">
-                                        @method('DELETE')
-                                        @csrf
-                                        <button class="fa3 fa-trash has-text-danger is-small" data-target="#deleteModal" aria-haspopup="true"></button>
-                                        <a href="{{route('products.edit',['product' => $data->id])}}" class="fa3 fa-pencil modal-button"</a>
-                                    </form>
-                                </td>
-                                <br>
-                            </tr>
+                                <tr>
+                                    <td>{{$data->name}}</td>
+                                    <td>{{$data->id}}</td>
+                                    <td>{{$data->price}}</td>
+                                    <td>{{$data->quantity}}</td>
+                                    <!-- <td> <a href="products/{product}/edit"> <i class="fa3 fa-pencil has-text-grey"></i> </a> <i class="fa3 fa-trash has-text-danger modal-button" onClick="askDeleteItem({{$data->id}})" data-target="#deleteModal" aria-haspopup="true"></i> </td> -->
+                                    <td>
+                                        <form action="{{route('products.destroy', $data->id)}}" method="POST">
+                                            @method('DELETE') @csrf
+                                            <button class="fa3 fa-trash has-text-danger is-small" data-target="#deleteModal" aria-haspopup="true"></button>
+                                            <a href="{{route('products.edit',['product' => $data->id])}}" class="fa3 fa-pencil modal-button" </a>
+                                        </form>
+                                    </td>
+                                    <br>
+                                </tr>
                             @endforeach
                     </div>
                     </table>
@@ -78,12 +63,9 @@
                         <span>Criar novo produto</span>
                     </a>
                 </div>
-
             </div>
-
         </div>
     </div>
-
 
     <style>
         @font-face {
@@ -92,6 +74,7 @@
             font-weight: normal;
             font-style: normal;
         }
+
         .fa3 {
             display: inline-block;
             font: normal normal normal 18px/1 fontawesome3;
@@ -103,41 +86,5 @@
             cursor: pointer
         }
     </style>
-
-
-<script>
-    function askDeleteItem(id){
-        // var target = document.querySelector(el.getAttribute('data-target'));
-        // target.classList.add('is-active');
-
-        if (confirm('Tem certeza que deseja deletar o item '+id+'?')) {
-            confirmDeleteItem(id);
-        } else {
-
-        }
-    }
-
-    function confirmDeleteItem(id){
-        alert(id);
-    }
-
-//     $('#edit-modal').on('show.bs.modal', function(e) {
-
-// var $modal = $(this),
-//     esseyId = e.relatedTarget.id;
-
-// $.ajax({
-//     cache: false,
-//     type: 'POST',
-//     url: 'backend.php',
-//     data: 'EID=' + essayId,
-//     success: function(data) {
-//         $modal.find('.edit-content').html(data);
-//     }
-// });
-// })
-
-</script>
 </body>
-
 </html>

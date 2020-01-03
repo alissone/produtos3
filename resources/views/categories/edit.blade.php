@@ -10,11 +10,8 @@
 </head>
 
 <body>
-
-
     <section class="section">
         <div class="container">
-
             <nav class="breadcrumb has-arrow-separator" aria-label="breadcrumbs">
                 <ul>
                     <li><a href="{{ url('/') }}">Home</a></li>
@@ -24,47 +21,41 @@
             </nav>
             <br/>
 
-            <h1 class="title">
-                Editar categoria
-            </h1>
-            <p class="subtitle">
-                Modificar categoria #{{$category->id}}
-            </p>
-
+            <h1 class="title"> Editar categoria </h1>
+            <p class="subtitle"> Modificar categoria #{{$category->id}} </p>
             <br/>
 
             <div class="columns">
                 <div class="column is-half">
-                <form id="create_product_form" action="{{route('categories.update',['category' => $category->id])}}" method="POST">
-                    @method('PUT')
-                    @csrf
-                    <div class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Informações da Categoria
-                            </p>
+                    <form id="create_product_form" action="{{route('categories.update',['category' => $category->id])}}" method="POST">
+                        @method('PUT') @csrf
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Informações da Categoria
+                                </p>
 
-                            </a>
-                        </header>
-                        <div class="card-content">
-                            <div class="content">
-                                <!-- Forms -->
-                                <div class="field">
-                                    <label class="label">Nome</label>
-                                    <div class="control">
-                                        <input class="input is-focused" name="name"  type="text" value="{{$category->name}}">
+                                </a>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <!-- Forms -->
+                                    <div class="field">
+                                        <label class="label">Nome</label>
+                                        <div class="control">
+                                            <input class="input is-focused" name="name" type="text" value="{{$category->name}}">
+                                        </div>
                                     </div>
+
                                 </div>
 
                             </div>
+                            <footer class="card-footer">
+                                <a href="{{ url('/categories') }}" class="card-footer-item">Cancelar</a>
 
-                        </div>
-                        <footer class="card-footer">
-                            <a href="{{ url('/categories') }}" class="card-footer-item">Cancelar</a>
-
-                            <a type="send" href="javascript:{}" onclick="document.getElementById('create_product_form').submit(); return false;" class="card-footer-item is-dark">Salvar</a>
-                        </footer>
-                        </form>
+                                <a type="send" href="javascript:{}" onclick="document.getElementById('create_product_form').submit(); return false;" class="card-footer-item is-dark">Salvar</a>
+                            </footer>
+                    </form>
                     </div>
                 </div>
             </div>
