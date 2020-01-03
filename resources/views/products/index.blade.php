@@ -59,7 +59,7 @@
                     </div>
                     </table>
                     <a href="{{ route('products.create') }}" class="button is-success">
-                        <span class="icon is-medium"> </span>
+                        <i class="icon is-medium fa3 fa-plus" style="padding-top:5px;"></i>
                         <span>Criar novo produto</span>
                     </a>
                 </div>
