@@ -69,9 +69,9 @@
 
                                     <div class="dropdown is-hoverable">
                                         <div class="dropdown-trigger">
-                                            <select id=cCategoria name="category_id">
+                                            <select id="category_id" name="category_id">
                                                 @foreach($categories as $key => $data)
-                                                    <option value="{{$data->id}}"><a href="#" class="dropdown-item">{{$data->name}}</a></option>
+                                                    <option value="{{$data->id}}">{{$data->name}}</option>
                                                 @endforeach
                                             </select>
                                         </div>

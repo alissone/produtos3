@@ -68,17 +68,9 @@
                                         </div>
                                     </div>
 
-                                    <select id=cCategoria name="category_id">
+                                    <select id="category_id" name="category_id">
                                         @foreach($categories as $key => $data)
-                                            @if ($data->id != old('cCategoria', $product->category->id))
-                                                <option selected="selected" value="{{$data->id}}">
-                                                    <a href="#" class="dropdown-item">{{$data->name}}</a>
-                                                </option>
-                                            @else
-                                                <option value="{{$data->id}}">
-                                                    <a href="#" class="dropdown-item">{{$data->name}}</a>
-                                                </option>
-                                            @endif
+                                            <option value="{{$data->id}}" {{ $data->id == $product->category_id ? "selected" : "" }} >{{$data->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
