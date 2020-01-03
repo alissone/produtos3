@@ -29,3 +29,13 @@ type Product{
     quantity: Int
     category_id: Int
 }
+
+type Query {
+    products: [Product!]! @paginate(defaultCount: 10)
+    product(id: ID @eq): Product @find
+}
+
+type Category {
+    categories: [Category!]! @paginate(defaultCount: 10)
+    category(id: ID @eq): Category @find
+}
