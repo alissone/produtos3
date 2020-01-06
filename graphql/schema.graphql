@@ -22,18 +22,18 @@ type Product{
     name: String!
     price: Float!
     quantity: Int!
-    created_at: DateTime!
-    updated_at: DateTime!
-    caregory_id: [Category!]! @hasMany
+    caregory_id: ID!
+    created_at: String!
+    updated_at: String!
+    category: Category! @belongsTo
 }
 
 type Category{
     id: ID!
     name: String!
-    created_at: DateTime!
-    updated_at: DateTime!
-    products: Product! @belongsTo
-
+    created_at: String!
+    updated_at: String!
+    products: [Product!]! @hasMany
 }
 
 type Query {
@@ -46,6 +46,6 @@ type Query {
 
 type Mutation {
     createProduct(name: String!, price: Float!, quantity:Int!, category_id:ID!): Product @create
-    updateProduct(id: ID, name: String, price: Float, quantity:Int): Product @update
+    updateProduct(id: ID!, name: String, price: Float, quantity:Int): Product @update
     deleteProduct(id: ID!): Product @delete
 }

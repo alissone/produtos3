@@ -11,7 +11,8 @@ mutation {
   createProduct(
     name: "TesteGraphQL",
     price: 20.00,
-    quantity: 2
+    quantity: 2,
+    category_id: 7
   )
   {
     id
@@ -40,4 +41,17 @@ mutation {
         id
         name
     }
+}
+
+
+mutation {
+  updateProduct(
+    id:21,
+    name:"Amendoim"
+    price: 8.90
+  )
+  {
+    name
+    price
+  }
 }
