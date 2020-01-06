@@ -129,6 +129,10 @@
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/facade/ignition" />
       <path value="$PROJECT_DIR$/vendor/mpociot/laravel-test-factory-helper" />
+      <path value="$PROJECT_DIR$/vendor/webonyx/graphql-php" />
+      <path value="$PROJECT_DIR$/vendor/nuwave/lighthouse" />
+      <path value="$PROJECT_DIR$/vendor/haydenpierce/class-finder" />
+      <path value="$PROJECT_DIR$/vendor/mll-lab/laravel-graphql-playground" />
     </include_path>
   </component>
   <component name="ProjectId" id="1VX1vaZ7YOUmehhosEWmPFjr3Jd" />
@@ -193,6 +197,7 @@
       <workItem from="1577735807934" duration="50000" />
       <workItem from="1577735881172" duration="4296000" />
       <workItem from="1577966029906" duration="15110000" />
+      <workItem from="1578310148674" duration="4301000" />
     </task>
     <servers />
   </component>
@@ -228,10 +233,10 @@
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state x="311" y="84" width="962" height="732" key="SettingsEditor/0.0.1600.899@0.0.1600.899" timestamp="1577787379167" />
-    <state x="493" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1577966031560">
+    <state x="493" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1578310373023">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
-    <state x="493" y="277" key="com.intellij.ide.util.TipDialog/0.0.1600.899@0.0.1600.899" timestamp="1577966031560" />
+    <state x="493" y="277" key="com.intellij.ide.util.TipDialog/0.0.1600.899@0.0.1600.899" timestamp="1578310373023" />
     <state x="0" y="0" width="1592" height="892" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1577451865364">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
@@ -244,10 +249,10 @@
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state x="448" y="172" width="700" height="530" key="recent.locations.popup/0.0.1600.899@0.0.1600.899" timestamp="1577709246051" />
-    <state x="463" y="203" key="run.anything.popup" timestamp="1577393599867">
+    <state x="463" y="203" key="run.anything.popup" timestamp="1578310371729">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
-    <state x="463" y="203" key="run.anything.popup/0.0.1600.899@0.0.1600.899" timestamp="1577393599867" />
+    <state x="463" y="203" key="run.anything.popup/0.0.1600.899@0.0.1600.899" timestamp="1578310371729" />
     <state x="463" y="193" width="672" height="678" key="search.everywhere.popup" timestamp="1577997667165">
       <screen x="0" y="0" width="1600" height="899" />
     </state>

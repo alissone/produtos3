@@ -24,6 +24,7 @@ type Product{
     quantity: Int!
     created_at: DateTime!
     updated_at: DateTime!
+    caregory_id: [Category!]! @hasMany
 }
 
 type Category{
@@ -31,6 +32,8 @@ type Category{
     name: String!
     created_at: DateTime!
     updated_at: DateTime!
+    products: Product! @belongsTo
+
 }
 
 type Query {
@@ -42,7 +45,7 @@ type Query {
 }
 
 type Mutation {
-    createProduct(name: String!, price: Float!, quantity:Int!): Product
-    updateProduct(id: ID, name: String, price: Float, quantity:Int): Product
-    deleteProduct(id: ID): Product
+    createProduct(name: String!, price: Float!, quantity:Int!, category_id:ID!): Product @create
+    updateProduct(id: ID, name: String, price: Float, quantity:Int): Product @update
+    deleteProduct(id: ID!): Product @delete
 }

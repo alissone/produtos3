@@ -1,0 +1,43 @@
+query {
+    product{
+        name
+        id
+        quantity
+        price
+    }
+}
+
+mutation {
+  createProduct(
+    name: "TesteGraphQL",
+    price: 20.00,
+    quantity: 2
+  )
+  {
+    id
+    name
+  }
+}
+
+mutation {
+  deleteProduct(
+    id:13,
+  )
+  {
+    id
+    name
+  }
+}
+
+mutation {
+    updateProduct(
+        id:12
+        name: "Modificação",
+        price: 18.99,
+        quantity: 1
+    )
+    {
+        id
+        name
+    }
+}
