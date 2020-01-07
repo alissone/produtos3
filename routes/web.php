@@ -23,6 +23,7 @@ Route::get(
 }
 );
 
+// Route::resource('products', 'ProductController')->middleware('auth');
 Route::resource('products', 'ProductController');
 
 Route::get(
@@ -32,3 +33,7 @@ Route::get(
 );
 
 Route::resource('categories', 'CategoryController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

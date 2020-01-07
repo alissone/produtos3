@@ -46,9 +46,11 @@ class ProductController extends Controller
      *
      * @param Product $product
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function edit(Product $product)
     {
+        $this->authorize('update', $product);
         return view('products.edit', ['categories' => Category::all(), 'product' => $product]);
     }
 
@@ -74,6 +76,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
+        $this->authorize('delete', $product);
         $product->delete();
         return redirect()->route('products.index')->with('alert-success', 'Produto excluído!');
     }

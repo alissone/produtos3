@@ -22,49 +22,59 @@
             </div>
         @endif
 
-        <div class="columns is-mobile is-centered">
-            <div class="column is-half">
-                <div class="content">
-                    <div class="title is-vcentered">
-                        <br/> <br/>
-                        <br/> Lista de Produtos Cadastrados Atualmente </div>
+            @if ((Auth::user()) && (Auth::user()->is_admin == 1))
+                <div class="columns is-mobile is-centered">
+                    <div class="column is-half">
+                        <div class="content">
+                            <div class="title is-vcentered">
+                                <br/> <br/>
+                                <br/> Lista de Produtos Cadastrados Atualmente </div>
 
-                    <div class="prod_listing">
-                        <table style="width:100%">
-                            <tr>
-                                <th><b>Nome</b></th>
-                                <td><b>ID</b></td>
-                                <td><b>Preço</b></td>
-                                <td><b>Quantidade</b></td>
-                                <td><b>Ações</b></td>
-                                <br>
-                            </tr>
-                            @foreach($products as $key => $data)
-                                <tr>
-                                    <td>{{$data->name}}</td>
-                                    <td>{{$data->id}}</td>
-                                    <td>{{$data->price}}</td>
-                                    <td>{{$data->quantity}}</td>
-                                    <!-- <td> <a href="products/{product}/edit"> <i class="fa3 fa-pencil has-text-grey"></i> </a> <i class="fa3 fa-trash has-text-danger modal-button" onClick="askDeleteItem({{$data->id}})" data-target="#deleteModal" aria-haspopup="true"></i> </td> -->
-                                    <td>
-                                        <form action="{{route('products.destroy', $data->id)}}" method="POST">
-                                            @method('DELETE') @csrf
-                                            <button class="fa3 fa-trash has-text-danger is-small" data-target="#deleteModal" aria-haspopup="true"></button>
-                                            <a href="{{route('products.edit',['product' => $data->id])}}" class="fa3 fa-pencil modal-button" </a>
-                                        </form>
-                                    </td>
-                                    <br>
-                                </tr>
-                            @endforeach
+                            <div class="prod_listing">
+                                <table style="width:100%">
+                                    <tr>
+                                        <th><b>Nome</b></th>
+                                        <td><b>ID</b></td>
+                                        <td><b>Preço</b></td>
+                                        <td><b>Quantidade</b></td>
+                                        <td><b>Ações</b></td>
+                                        <br>
+                                    </tr>
+                                    @foreach($products as $key => $data)
+                                        <tr>
+                                            <td>{{$data->name}}</td>
+                                            <td>{{$data->id}}</td>
+                                            <td>{{$data->price}}</td>
+                                            <td>{{$data->quantity}}</td>
+                                            <!-- <td> <a href="products/{product}/edit"> <i class="fa3 fa-pencil has-text-grey"></i> </a> <i class="fa3 fa-trash has-text-danger modal-button" onClick="askDeleteItem({{$data->id}})" data-target="#deleteModal" aria-haspopup="true"></i> </td> -->
+                                            <td>
+                                                <form action="{{route('products.destroy', $data->id)}}" method="POST">
+                                                    @method('DELETE') @csrf
+                                                    <button class="fa3 fa-trash has-text-danger is-small" data-target="#deleteModal" aria-haspopup="true"></button>
+                                                    <a href="{{route('products.edit',['product' => $data->id])}}" class="fa3 fa-pencil modal-button" </a>
+                                                </form>
+                                            </td>
+                                            <br>
+                                        </tr>
+                                    @endforeach
+                            </div>
+                            </table>
+                            <a href="{{ route('products.create') }}" class="button is-success">
+                                <i class="icon is-medium fa3 fa-plus" style="padding-top:5px;"></i>
+                                <span>Criar novo produto</span>
+                            </a>
+                        </div>
                     </div>
-                    </table>
-                    <a href="{{ route('products.create') }}" class="button is-success">
-                        <i class="icon is-medium fa3 fa-plus" style="padding-top:5px;"></i>
-                        <span>Criar novo produto</span>
-                    </a>
                 </div>
-            </div>
-        </div>
+            @else
+                <br/><br/><br/>
+                <h2 class="has-text-centered is-size-3 notification is-danger">Você precisa ser um usuário admin para acessar essa página.</h2>
+                <h2 class="has-text-centered is-size-4">Clique <a href="{{ route('home') }}" class="is-link">aqui</a> para voltar para homepage</h2>
+            @endif
+                <!-- <br/><br/><br/>
+                <h2 class="has-text-centered is-size-3 notification is-danger">Você precisa estar logado para acessar essa página.</h2>
+                <h2 class="has-text-centered is-size-4">Clique <a href="{{ route('login') }}" class="is-link">aqui</a> para fazer login</h2> -->
+
     </div>
 
     <style>
