@@ -31,8 +31,43 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Crud" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Crud" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Crud" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Crud" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="users: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Crud" type="feb32156:DbDataSourceImpl" />
+        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="database" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="produtos3" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -144,6 +179,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -169,7 +205,17 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:Crud" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:Crud" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@297e6008" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -200,6 +246,7 @@
       <workItem from="1577966029906" duration="15110000" />
       <workItem from="1578310148674" duration="5408000" />
       <workItem from="1578396316625" duration="5132000" />
+      <workItem from="1578417773319" duration="822000" />
     </task>
     <servers />
   </component>
@@ -215,6 +262,10 @@
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state x="500" y="44" width="591" height="804" key="#PHP/0.0.1600.899@0.0.1600.899" timestamp="1577386628801" />
+    <state x="395" y="112" width="800" height="679" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578417887544">
+      <screen x="0" y="0" width="1600" height="899" />
+    </state>
+    <state x="395" y="112" width="800" height="679" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.899@0.0.1600.899" timestamp="1578417887544" />
     <state x="367" y="0" width="850" height="890" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577473195665">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
@@ -223,6 +274,10 @@
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state x="533" y="209" width="526" height="475" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.899@0.0.1600.899" timestamp="1577474298377" />
+    <state x="578" y="209" width="424" height="486" key="FileChooserDialogImpl" timestamp="1578417867020">
+      <screen x="0" y="0" width="1600" height="899" />
+    </state>
+    <state x="578" y="209" width="424" height="486" key="FileChooserDialogImpl/0.0.1600.899@0.0.1600.899" timestamp="1578417867020" />
     <state width="207" height="456" key="HiddenNamespacesPopup" timestamp="1577453367898">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
@@ -235,10 +290,10 @@
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state x="311" y="84" width="962" height="732" key="SettingsEditor/0.0.1600.899@0.0.1600.899" timestamp="1577787379167" />
-    <state x="493" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1578396316574">
+    <state x="493" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1578417773423">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
-    <state x="493" y="277" key="com.intellij.ide.util.TipDialog/0.0.1600.899@0.0.1600.899" timestamp="1578396316573" />
+    <state x="493" y="277" key="com.intellij.ide.util.TipDialog/0.0.1600.899@0.0.1600.899" timestamp="1578417773423" />
     <state x="0" y="0" width="1592" height="892" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1577451865364">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
@@ -255,9 +310,9 @@
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state x="463" y="203" key="run.anything.popup/0.0.1600.899@0.0.1600.899" timestamp="1578310371729" />
-    <state x="463" y="193" width="672" height="678" key="search.everywhere.popup" timestamp="1577997667165">
+    <state x="463" y="193" width="672" height="678" key="search.everywhere.popup" timestamp="1578417987234">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
-    <state x="463" y="193" width="672" height="678" key="search.everywhere.popup/0.0.1600.899@0.0.1600.899" timestamp="1577997667165" />
+    <state x="463" y="193" width="672" height="678" key="search.everywhere.popup/0.0.1600.899@0.0.1600.899" timestamp="1578417987234" />
   </component>
 </project>
