@@ -133,6 +133,7 @@
       <path value="$PROJECT_DIR$/vendor/nuwave/lighthouse" />
       <path value="$PROJECT_DIR$/vendor/haydenpierce/class-finder" />
       <path value="$PROJECT_DIR$/vendor/mll-lab/laravel-graphql-playground" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1VX1vaZ7YOUmehhosEWmPFjr3Jd" />
@@ -197,7 +198,8 @@
       <workItem from="1577735807934" duration="50000" />
       <workItem from="1577735881172" duration="4296000" />
       <workItem from="1577966029906" duration="15110000" />
-      <workItem from="1578310148674" duration="4927000" />
+      <workItem from="1578310148674" duration="5408000" />
+      <workItem from="1578396316625" duration="5132000" />
     </task>
     <servers />
   </component>
@@ -233,10 +235,10 @@
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state x="311" y="84" width="962" height="732" key="SettingsEditor/0.0.1600.899@0.0.1600.899" timestamp="1577787379167" />
-    <state x="493" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1578310373023">
+    <state x="493" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1578396316574">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
-    <state x="493" y="277" key="com.intellij.ide.util.TipDialog/0.0.1600.899@0.0.1600.899" timestamp="1578310373023" />
+    <state x="493" y="277" key="com.intellij.ide.util.TipDialog/0.0.1600.899@0.0.1600.899" timestamp="1578396316573" />
     <state x="0" y="0" width="1592" height="892" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1577451865364">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
