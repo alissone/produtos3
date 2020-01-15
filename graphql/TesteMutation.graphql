@@ -12,7 +12,7 @@ mutation {
     name: "TesteGraphQL",
     price: 20.00,
     quantity: 2,
-    category_id: 7
+    category_id: 33
   )
   {
     id
@@ -22,7 +22,7 @@ mutation {
 
 mutation {
   deleteProduct(
-    id:13,
+    id:10,
   )
   {
     id
@@ -32,7 +32,7 @@ mutation {
 
 mutation {
     updateProduct(
-        id:12
+        id:10
         name: "Modificação",
         price: 18.99,
         quantity: 1

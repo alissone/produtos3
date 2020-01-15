@@ -11,11 +11,15 @@
         "php": "^7.2",
         "doctrine/dbal": "^2.10",
         "fideloper/proxy": "^4.0",
+        "guzzlehttp/guzzle": "^6.5",
         "laravel/framework": "^6.2",
+        "laravel/slack-notification-channel": "^2.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^1.1",
+        "league/flysystem": "^1.0",
         "mll-lab/laravel-graphql-playground": "^2.0",
-        "nuwave/lighthouse": "^4.7"
+        "nuwave/lighthouse": "^4.7",
+        "predis/predis": "^1.1"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

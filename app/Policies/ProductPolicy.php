@@ -16,9 +16,21 @@ class ProductPolicy
      * @param  \App\User  $user
      * @return mixed
      */
+    public function isAdmin(User $user)
+    {
+        return $user->is_admin;
+    }
+
+
+        /**
+     * Determine whether the user can view any products.
+     *
+     * @param  \App\User  $user
+     * @return mixed
+     */
     public function viewAny(User $user)
     {
-        // return $user->is_admin === 1;
+        return \Auth::check();
     }
 
     /**
@@ -30,7 +42,6 @@ class ProductPolicy
      */
     public function view(User $user, Product $product)
     {
-        // return $user->is_admin == "1";
         return true;
     }
 
@@ -42,7 +53,7 @@ class ProductPolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->is_admin;
     }
 
     /**
@@ -54,7 +65,7 @@ class ProductPolicy
      */
     public function update(User $user, Product $product)
     {
-        //
+        return $user->is_admin;
     }
 
     /**
@@ -64,9 +75,21 @@ class ProductPolicy
      * @param  \App\Product  $product
      * @return mixed
      */
-    public function delete(User $user, Product $product)
+    public function delete(User $user)
     {
-        //
+        return $user->is_admin;
+    }
+
+    /**
+     * Determine whether the user can edit the product.
+     *
+     * @param  \App\User  $user
+     * @param  \App\Product  $product
+     * @return mixed
+     */
+    public function edit(User $user)
+    {
+        return $user->is_admin;
     }
 
     /**
@@ -78,7 +101,7 @@ class ProductPolicy
      */
     public function restore(User $user, Product $product)
     {
-        //
+        return $user->is_admin;
     }
 
     /**
@@ -90,6 +113,7 @@ class ProductPolicy
      */
     public function forceDelete(User $user, Product $product)
     {
-        //
+        return $user->is_admin;
     }
+
 }

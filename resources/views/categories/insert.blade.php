@@ -22,6 +22,7 @@
             </nav>
             <br/>
 
+            @can('create', App\Product::class)
             <h1 class="title"> Criar uma Nova Categoria </h1>
             <p class="subtitle"> Cadastro de categorias </p>
             <br/>
@@ -76,6 +77,16 @@
                     </div>
                 </div>
             </div>
+            @endcan
+
+            @cannot('create', App\Product::class)
+                @component('layouts.alertpage')
+                Você precisa estar logado como admnistrador para acessar essa página.
+                    @slot('link')
+                        {{ route('home') }}
+                    @endslot
+                @endcomponent
+            @endcannot
     </section>
 </body>
 

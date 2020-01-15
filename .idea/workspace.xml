@@ -169,6 +169,13 @@
       <path value="$PROJECT_DIR$/vendor/haydenpierce/class-finder" />
       <path value="$PROJECT_DIR$/vendor/mll-lab/laravel-graphql-playground" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/laravel/slack-notification-channel" />
+      <path value="$PROJECT_DIR$/vendor/predis/predis" />
     </include_path>
   </component>
   <component name="ProjectId" id="1VX1vaZ7YOUmehhosEWmPFjr3Jd" />
@@ -205,17 +212,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:Crud" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:Crud" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@297e6008" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -246,7 +243,10 @@
       <workItem from="1577966029906" duration="15110000" />
       <workItem from="1578310148674" duration="5408000" />
       <workItem from="1578396316625" duration="5132000" />
-      <workItem from="1578417773319" duration="822000" />
+      <workItem from="1578417773319" duration="10787000" />
+      <workItem from="1578505964627" duration="45000" />
+      <workItem from="1578506646973" duration="24826000" />
+      <workItem from="1579115447722" duration="6429000" />
     </task>
     <servers />
   </component>
@@ -270,34 +270,46 @@
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state x="367" y="0" width="850" height="890" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.899@0.0.1600.899" timestamp="1577473195665" />
-    <state x="533" y="209" width="526" height="475" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1577474298377">
+    <state x="533" y="209" width="526" height="475" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578593391920">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
-    <state x="533" y="209" width="526" height="475" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.899@0.0.1600.899" timestamp="1577474298377" />
-    <state x="578" y="209" width="424" height="486" key="FileChooserDialogImpl" timestamp="1578417867020">
+    <state x="533" y="209" width="526" height="475" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.899@0.0.1600.899" timestamp="1578593391920" />
+    <state x="578" y="209" width="424" height="486" key="FileChooserDialogImpl" timestamp="1578597854796">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
-    <state x="578" y="209" width="424" height="486" key="FileChooserDialogImpl/0.0.1600.899@0.0.1600.899" timestamp="1578417867020" />
+    <state x="578" y="209" width="424" height="486" key="FileChooserDialogImpl/0.0.1600.899@0.0.1600.899" timestamp="1578597854796" />
     <state width="207" height="456" key="HiddenNamespacesPopup" timestamp="1577453367898">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state width="207" height="456" key="HiddenNamespacesPopup/0.0.1600.899@0.0.1600.899" timestamp="1577453367898" />
-    <state x="481" y="271" width="629" height="351" key="NewPhpClassDialog" timestamp="1577473186657">
+    <state x="481" y="271" width="678" height="353" key="NewPhpClassDialog" timestamp="1578512902128">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
-    <state x="481" y="271" width="629" height="351" key="NewPhpClassDialog/0.0.1600.899@0.0.1600.899" timestamp="1577473186657" />
+    <state x="481" y="271" width="678" height="353" key="NewPhpClassDialog/0.0.1600.899@0.0.1600.899" timestamp="1578512902128" />
+    <state x="639" y="378" width="312" height="147" key="NewPhpFileDialog" timestamp="1578420387331">
+      <screen x="0" y="0" width="1600" height="899" />
+    </state>
+    <state x="639" y="378" width="312" height="147" key="NewPhpFileDialog/0.0.1600.899@0.0.1600.899" timestamp="1578420387331" />
     <state x="311" y="84" width="962" height="732" key="SettingsEditor" timestamp="1577787379167">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state x="311" y="84" width="962" height="732" key="SettingsEditor/0.0.1600.899@0.0.1600.899" timestamp="1577787379167" />
-    <state x="493" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1578417773423">
+    <state x="1465" y="119" width="1400" height="699" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579121629623">
+      <screen x="1365" y="19" width="1600" height="900" />
+    </state>
+    <state x="1465" y="119" width="1400" height="699" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1365.19.1600.900/0.0.1366.768@1365.19.1600.900" timestamp="1579121629623" />
+    <state x="493" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1578506647519">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
-    <state x="493" y="277" key="com.intellij.ide.util.TipDialog/0.0.1600.899@0.0.1600.899" timestamp="1578417773423" />
+    <state x="493" y="277" key="com.intellij.ide.util.TipDialog/0.0.1600.899@0.0.1600.899" timestamp="1578506647519" />
     <state x="0" y="0" width="1592" height="892" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1577451865364">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state x="0" y="0" width="1592" height="892" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/0.0.1600.899@0.0.1600.899" timestamp="1577451865364" />
+    <state x="499" y="72" width="601" height="756" key="find.popup" timestamp="1578580210926">
+      <screen x="0" y="0" width="1600" height="899" />
+    </state>
+    <state x="499" y="72" width="601" height="756" key="find.popup/0.0.1600.899@0.0.1600.899" timestamp="1578580210926" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1577458063612">
       <screen x="0" y="0" width="1600" height="899" />
     </state>
@@ -310,9 +322,10 @@
       <screen x="0" y="0" width="1600" height="899" />
     </state>
     <state x="463" y="203" key="run.anything.popup/0.0.1600.899@0.0.1600.899" timestamp="1578310371729" />
-    <state x="463" y="193" width="672" height="678" key="search.everywhere.popup" timestamp="1578417987234">
-      <screen x="0" y="0" width="1600" height="899" />
+    <state x="1828" y="212" width="672" height="679" key="search.everywhere.popup" timestamp="1579121608705">
+      <screen x="1365" y="19" width="1600" height="900" />
     </state>
-    <state x="463" y="193" width="672" height="678" key="search.everywhere.popup/0.0.1600.899@0.0.1600.899" timestamp="1578417987234" />
+    <state x="463" y="193" width="672" height="678" key="search.everywhere.popup/0.0.1600.899@0.0.1600.899" timestamp="1578597841919" />
+    <state x="1828" y="212" width="672" height="679" key="search.everywhere.popup/1365.19.1600.900/0.0.1366.768@1365.19.1600.900" timestamp="1579121608705" />
   </component>
 </project>

@@ -11,6 +11,11 @@
 |
 */
 
+use App\Mail\MailTesting;
+use App\User;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Route;
+
 Route::get(
     '/', function () {
         return view('welcome');
@@ -19,12 +24,11 @@ Route::get(
 
 Route::get(
     '/insert', function () {
-    return view('/products/insert');
-}
+        return view('/products/insert');
+    }
 );
 
-// Route::resource('products', 'ProductController')->middleware('auth');
-Route::resource('products', 'ProductController');
+Route::resource('products', 'ProductController')->middleware('auth');
 
 Route::get(
     '/categories/insert', function () {
@@ -37,3 +41,8 @@ Route::resource('categories', 'CategoryController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/send-mail', function () {
+    Mail::to('alisson@email.com')->send(new MailTesting());
+    return 'Um e-mail foi enviado ao MailTrap';
+});

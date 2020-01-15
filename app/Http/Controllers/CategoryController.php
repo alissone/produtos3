@@ -24,6 +24,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', Category::class);
         return view('categories.insert');
     }
 
@@ -35,7 +36,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
+        $this->authorize('create', Category::class);
         Category::create($request->all());
         return (redirect()->route('categories.index')->with('message', 'Categoria criada!'));
     }
@@ -48,6 +49,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
+        $this->authorize('edit', Category::class);
         return view('categories.edit', ['category' => $category]);
     }
 
@@ -60,6 +62,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
+        $this->authorize('update', Category::class);
         $category->update($request->all());
         return (redirect()->route('categories.index')->with('message', 'Categoria editada!'));
     }
@@ -73,6 +76,7 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
+        $this->authorize('delete', Category::class);
         $category->delete();
         return redirect()->route('categories.index')->with('alert-success', 'Categoria excluída!');
     }
