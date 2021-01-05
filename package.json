@@ -17,7 +17,7 @@
     "vuetify": "^2.1.0"
   },
   "devDependencies": {
-    "axios": "^0.19",
+    "axios": "^0.21",
     "bootstrap": "^4.0.0",
     "cross-env": "^5.1",
     "graphql-tag": "^2.9.0",
